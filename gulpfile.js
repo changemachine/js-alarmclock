@@ -6,6 +6,18 @@ var source      = require('vinyl-source-stream');
 var gulp        = require('gulp');
 var del         = require('del');
 
+var lib = require('bower-files') ({
+  "overrides":{
+   "bootstrap" : {
+     "main": [
+       "less/bootstrap.less",
+       "dist/css/bootstrap.css",
+       "dist/js/bootstrap.js"
+     ]
+   }
+ }
+});
+
 var buildProduction = utilities.env.production;
 
 gulp.task("time", function( ) {
@@ -48,4 +60,20 @@ gulp.task("build", ['clean'], function(){
   } else {
     gulp.start('jsBrowserify');
   }
+  gulp.start('bower');
 });
+
+gulp.task('cssBower', function () {
+  return gulp.src(lib.ext('css').files)
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('./build/css'));
+});
+
+gulp.task('jsBower', function () {
+  return gulp.src(lib.ext('js').files)
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js'));
+});
+
+gulp.task('bower', ['jsBower', 'cssBower']);
