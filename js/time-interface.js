@@ -16,21 +16,22 @@ exports.startTime = function( )
     ampm = "AM";
   }
 
+  var start;
   if( hours < 10 )
   {
-    var start = "0" + hours;
+    start = "0" + hours;
     hours = start;
   }
 
   if( minutes < 10 )
   {
-    var start = "0" + minutes;
+    start = "0" + minutes;
     minutes = start;
   }
 
   if( seconds < 10 )
   {
-    var start = "0" + seconds;
+    start = "0" + seconds;
     seconds = start;
   }
   return hours + ":" + minutes + ":" + seconds + " " + ampm;

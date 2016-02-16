@@ -10,9 +10,57 @@
     <title></title>
   </head>
   <body>
-    <div class="container" style="text-align:center;">
-      <h3>Well look at the time</h3>
-      <h3 id="time"></h3>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="container" style="text-align:center;">
+          <h1 id="time"></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-xs-8 col-xs-offset-2">
+        <label for="">Set Alarm</label>
+        <div class="well">
+          <div class="row">
+            <div class="col-xs-3">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hour<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="dropdown-hour">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minute<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="dropdown-minute">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Second<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="dropdown-second">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM/PM<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="dropdown-ampm">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
