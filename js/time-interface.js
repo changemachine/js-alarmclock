@@ -22,5 +22,5 @@ exports.startTime = function( )
     var start = "0" + seconds;
     seconds = start;
   }
-  var printOut = hours + ":" + minutes + ":" + seconds;
+  return hours + ":" + minutes + ":" + seconds;
 };
