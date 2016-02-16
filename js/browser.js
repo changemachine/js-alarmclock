@@ -1,5 +1,12 @@
-var currentTime = require('./time-interface.js').starTime;
+var currentTime = require('./../js/time-interface.js').starTime;
 
-$(document).ready(function( ) {
-  $("#time").text(currentTime);
+$(document).ready(function( )
+{
+  startTickTime( );
+
+  function startTickTime( )
+  {
+    $("#time").text(currentTime);
+    setInterval( startTickTime, 1000 );
+  }
 });
