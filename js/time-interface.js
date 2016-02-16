@@ -1,4 +1,5 @@
-$(document).ready(function() {
+exports.startTime = function( )
+{
   tickTime( );
   setInterval( tickTime, 1000 );
   function tickTime( )
@@ -28,4 +29,8 @@ $(document).ready(function() {
     var printOut = hours + ":" + minutes + ":" + seconds;
     $("#time").text(printOut);
   }
+}
+
+$(document).ready(function() {
+
 });
