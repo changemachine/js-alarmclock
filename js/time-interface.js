@@ -6,8 +6,8 @@ exports.startTime = function( )
   var seconds = time._d.getSeconds( ).toString( );
   var ampm;
 
-  if( hours >= 12 )
-  {
+// 12-HOUR CLOCK
+  if( hours >= 12 ) {
       hours = hours - 12;
       if( hours === 0)
       {
@@ -15,26 +15,23 @@ exports.startTime = function( )
       }
       ampm = "PM";
   }
-  else
-  {
+  else{
     ampm = "AM";
   }
 
+// FORMATTING (consistent time characters)
   var start;
-  if( hours < 10 )
-  {
-    start = "0" + hours;
+  if( hours < 10 ){
+    start = hours;
     hours = start;
   }
 
-  if( minutes < 10 )
-  {
+  if( minutes < 10 ){
     start = "0" + minutes;
     minutes = start;
   }
 
-  if( seconds < 10 )
-  {
+  if( seconds < 10 ){
     start = "0" + seconds;
     seconds = start;
   }

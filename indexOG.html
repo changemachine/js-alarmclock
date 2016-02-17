@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="build/js/app.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="container" style="text-align:center;">
+          <h1 id="time"></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-xs-8 col-xs-offset-2">
+        <label for="">Set Alarm</label>
+        <div class="well">
+          <div class="row">
+           <div class="col-xs-3">
+             <div class="input-group">
+               <div class="input-group-btn">
+                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hour<span class="caret"></span></button>
+                 <ul class="dropdown-menu" id="dropdown-hour">
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <div class="col-xs-3">
+             <div class="input-group">
+               <div class="input-group-btn">
+                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minute<span class="caret"></span></button>
+                 <ul class="dropdown-menu" id="dropdown-minute">
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <div class="col-xs-3">
+             <div class="input-group">
+               <div class="input-group-btn">
+                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Second<span class="caret"></span></button>
+                 <ul class="dropdown-menu" id="dropdown-second">
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <div class="col-xs-3">
+             <div class="input-group">
+               <div class="input-group-btn">
+                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM/PM<span class="caret"></span></button>
+                 <ul class="dropdown-menu" id="dropdown-ampm">
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+          <!-- CONVERT TO <SELECT><OPTIONS>
+          <div class="row">
+            <div class="col-xs-3">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hour<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="dropdown-hour">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minute<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="dropdown-minute">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Second<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="dropdown-second">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM/PM<span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="dropdown-ampm">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+
+        </div>
+        <div class="container">
+          <span class="btn btn-info" id="set-alarm">Set Alarm</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -22,43 +22,34 @@
         <label for="">Set Alarm</label>
         <div class="well">
           <div class="row">
-            <div class="col-xs-3">
-              <div class="input-group">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hour<span class="caret"></span></button>
-                  <ul class="dropdown-menu" id="dropdown-hour">
-                  </ul>
-                </div>
+
+              <div class="col-xs-3">
+                <select id="dropdown-hour">
+                  <option disabled>Hour</option>
+                </select>
               </div>
-            </div>
-            <div class="col-xs-3">
-              <div class="input-group">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minute<span class="caret"></span></button>
-                  <ul class="dropdown-menu" id="dropdown-minute">
-                  </ul>
-                </div>
+
+              <div class="col-xs-3">
+                <select id="dropdown-minute">
+                  <option disabled>Minute</option>
+                </select>
+             </div>
+
+              <div class="col-xs-3">
+                <select id="dropdown-second">
+                  <option disabled>Second</option>
+                </select>
               </div>
-            </div>
-            <div class="col-xs-3">
-              <div class="input-group">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Second<span class="caret"></span></button>
-                  <ul class="dropdown-menu" id="dropdown-second">
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-3">
-              <div class="input-group">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM/PM<span class="caret"></span></button>
-                  <ul class="dropdown-menu" id="dropdown-ampm">
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+
+              <div class="col-xs-3">
+                <select id="dropdown-ampm">
+                  <option disabled>AM / PM</option>
+                </select>
+             </div>
+
+           </div>
+         </div><!-- /SELECTOR -->
+
         </div>
         <div class="container">
           <span class="btn btn-info" id="set-alarm">Set Alarm</span>

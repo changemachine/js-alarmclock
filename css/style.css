@@ -1,0 +1,20 @@
+.hour:hover {
+  background-color: rgb(200,200,200);
+}
+.minute:hover {
+  background-color: rgb(200,200,200);
+}
+.second:hover {
+  background-color: rgb(200,200,200);
+}
+.ampm:hover {
+  background-color: rgb(200,200,200);
+}
+.alarm {
+ background-color: red;
+ }
+/*.dropdown-toggle{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}*/

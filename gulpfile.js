@@ -5,8 +5,7 @@ var uglify      = require('gulp-uglify');
 var source      = require('vinyl-source-stream');
 var gulp        = require('gulp');
 var del         = require('del');
-
-var lib = require('bower-files') ({
+var lib         = require('bower-files') ({ //bootstrap overrides
   "overrides":{
    "bootstrap" : {
      "main": [
@@ -20,22 +19,18 @@ var lib = require('bower-files') ({
 
 var buildProduction = utilities.env.production;
 
-gulp.task("time", function( ) {
-  console.log("time works");
-});
-
-gulp.task('jsBrowserify', function( ) {
-  return browserify({ entries: ['./js/browser.js'] })
-    .bundle( )
-    .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'));
-});
-
 gulp.task('concatInterface', function( ) {
   return gulp.src(['./js/browser.js', './js/signup-interface.js'])
     .pipe(concat('allConcat.js'))
     .pipe(gulp.dest('./tmp'));
 });
+
+// gulp.task('jsBrowserify', function( ) {                    // VESTIGAL TASK?
+//   return browserify({ entries: ['./js/browser.js'] })
+//   .bundle( )
+//   .pipe(source('app.js'))
+//   .pipe(gulp.dest('./build/js'));
+// });
 
 gulp.task('jsBrowserify', ['concatInterface'] , function() {
   return browserify({ entries: ['./tmp/allConcat.js'] })
@@ -56,9 +51,9 @@ gulp.task("clean", function(){
 
 gulp.task("build", ['clean'], function(){
   if (buildProduction) {
-    gulp.start('minifyScripts');
+    gulp.start('minifyScripts'); //depends: jsBrowserify->concatInterface(browser.js / signup-interface.js)
   } else {
-    gulp.start('jsBrowserify');
+    gulp.start('jsBrowserify'); //depends: concatInterface
   }
   gulp.start('bower');
 });
