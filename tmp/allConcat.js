@@ -26,47 +26,43 @@ $(document).ready( function( ){
   $("#dropdown-ampm").change(function( ) {
     var selectedAmPm = $('#dropdown-ampm').val();
     selectedTime[3] = selectedAmPm;
-    console.log(selectedTime);
+    // console.log(selectedTime);
   });
 
   $("#set-alarm").on("click", function( ) {
-    if( selectedTime.length === 4 )
-    {
-        var alarmTime = [];
-        selectedTime.map(function(timeSegment){
-          if( timeSegment[ 0 ] === "hour" ){
-            alarmTime[0] = timeSegment[1];
-          }
-
-          else if( timeSegment[ 0 ] === "minute" ){
-            if( timeSegment[1] < 10 ){
-              var swap = "0" + timeSegment[1].toString( );
-              alarmTime[1] = swap;
-            }
-            else {
-              alarmTime[1] = timeSegment[1];
-            }
-          }
-
-          else if( timeSegment[ 0 ] === "second" ){
-            if( timeSegment[1] < 10 ){
-              var swap = "0" + timeSegment[1].toString( );
-              alarmTime[2] = swap;
-            }
-            else {
-              alarmTime[2] = timeSegment[1];
-            }
-          }
-
-          else if( timeSegment[ 0 ] === "ampm" ){
-            alarmTime[3] = timeSegment[1].toUpperCase( );
-          }
-      });//MAP
-
-      alarm = alarmTime[0].toString() + ":" + alarmTime[1].toString() + ":" + alarmTime[2].toString() + " " + alarmTime[3];
+    if( selectedTime.length === 4 ){
+      //   var alarmTime = [];
+      //   selectedTime.map(function(timeSegment){
+      //     if( timeSegment[ 0 ] === "hour" ){
+      //       alarmTime[0] = timeSegment[1];
+      //     }
+      //
+      //     else if( timeSegment[ 0 ] === "minute" ){
+      //       if( timeSegment[1] < 10 ){
+      //         var swap = "0" + timeSegment[1].toString( );
+      //         alarmTime[1] = swap;
+      //       }
+      //       else {
+      //         alarmTime[1] = timeSegment[1];
+      //       }
+      //     }
+      //
+      //     else if( timeSegment[ 0 ] === "second" ){
+      //       if( timeSegment[1] < 10 ){
+      //         var swap = "0" + timeSegment[1].toString( );
+      //         alarmTime[2] = swap;
+      //       }
+      //       else {
+      //         alarmTime[2] = timeSegment[1];
+      //       }
+      //     }
+      //
+      //     else if( timeSegment[ 0 ] === "ampm" ){
+      //       alarmTime[3] = timeSegment[1].toUpperCase( );
+      //     }
+      // });//MAP
+      alarm = selectedTime[0].toString() + ":" + selectedTime[1].toString() + ":" + selectedTime[2].toString() + " " + selectedTime[3];
       console.log(alarm);
-
-
     }
     else{
       alert("Select each item, por favor.");
@@ -105,7 +101,7 @@ $(document).ready( function( ){
       $("#dropdown-second").append("<option value='" + ii + "'>" + ii + "</option>");
     }
     // AM/PM OPTIONS
-    $("#dropdown-ampm").append("<option value='am'>" + "AM" + "</option>");
-    $("#dropdown-ampm").append("<option value='pm'>" + "PM" + "</option>");
+    $("#dropdown-ampm").append("<option value='AM'>" + "AM" + "</option>");
+    $("#dropdown-ampm").append("<option value='PM'>" + "PM" + "</option>");
   }
 });
